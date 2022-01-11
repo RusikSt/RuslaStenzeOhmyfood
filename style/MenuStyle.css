@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@400;500&family=Shrikhand&display=swap');
+
+/*position*/
+.flexCentr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flashIcon{
+    position: absolute;
+    left: 15px;
+}
+
+h4,
+p {
+    padding: 0;
+    margin: 0;
+}
+.carteMenu>h3{
+    font-family: "Roboto",sans-serif;
+}
+/*animation*/
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes apparition{
+    0%{
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+/**/
+body {
+    background-color: rgb(247, 247, 247);
+}
+
+.imgMenu {
+    height: 55vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.titreMenu>h2 {
+    font-family: "Shrikhand", sans-serif;
+
+}
+
+.buttonLike {
+    position: relative;
+    cursor: pointer;
+    background: rgb(247, 247, 247);
+    border: 0;
+    font-size: 20px;
+}
+
+.likeActive {
+    color: #9356DC;
+    position: absolute;
+    opacity: 0;
+}
+
+.likeActive:hover {
+    opacity: 1;
+    transition: 300ms;
+    filter: brightness(1.1);
+}
+
+/*Les menus*/
+.Line{
+    position: relative;
+    font-weight: 400;
+}
+.Line::after{
+    position: absolute;
+    content: "";
+    background-color: #99e2d0;
+    height: 3px;
+    width: 43px;
+    top: 25px;
+    left: 1px;
+}
+.titreMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px 15px 0 0;
+    background-color: rgb(247, 247, 247);
+    margin-top: -21px;
+    position: relative;
+}
+
+.menuList{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section>.Menu {
+    padding: 15px;
+}
+
+.menuPlat {
+    padding: 15px;
+    overflow: hidden;
+    width: 100%;
+}
+.menuPlat > h4,
+.menuPlat > p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+
+.menuPrix {
+    margin-left: auto;
+    margin-top: auto;
+    padding: 15px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.menuContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.Menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    width: 100%;
+}
+
+.menuInfo {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 1px 10px 5px 0px rgba(214, 213, 213, 0.884);
+    cursor: pointer;
+}
+.apparence1{
+    animation-name: apparition;
+    animation-duration: 1s;
+}
+.apparence2{
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 100ms;
+}
+.apparence3{
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 200ms;
+}
+.menuInfo:hover>.platCommand {
+    margin-right: 0;
+    transition: 600ms;
+}
+.menuInfo>.platCommand {
+    transition: 600ms;
+}
+
+.menuInfo:hover i {
+    animation-name: rotate;
+    animation-duration: 0.5s;
+}
+
+
+.platCommand {
+    background-color: #99e2d0;
+    margin-right: -45px;
+    width: 45px;
+    height: 69px;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.platCommand>i {
+    border-radius: 25px;
+    height: 25px;
+    width: 25px;
+    color: #99e2d0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*button*/
+.btnPosition{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+.btnCommande{
+    background:linear-gradient(to bottom right,#FF79DA, #9356DC );
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 5px 4px 6px 1px grey;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    transition-property: transform;
+    transition-duration: 500ms;
+    cursor: pointer;
+}
+.btnCommande:hover{
+    transform: scale(1.15);
+    filter: brightness(1.1);
+    box-shadow: 5px 4px 6px 1px rgb(114, 113, 113);
+}
+/**/
+body {
+    margin: 0px;
+    font-family: "Roboto", 'Times New Roman', Times, sans-serif;
+}
+
+header {
+    box-shadow: 0px 1.5px 2.5px 1px gray;
+    padding: 5px;
+    position: relative;
+}
+
+.imgLogo {
+    width: auto;
+    height: 25px;
+}
+
+/*footeur*/
+footer {
+    background-color: rgb(39, 38, 38);
+    padding: 40px;
+}
+
+.titre {
+    font-family: "Shrikhand";
+    color: rgb(247, 247, 247);
+    margin-bottom: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(247, 247, 247);
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+}

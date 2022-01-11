@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@400;500&family=Shrikhand&display=swap');
+
+:root{
+    --grisClair: #F6F6F6;
+    --violetClair: #F5EDFF;
+}
+
+
+/*Animation chargement*/
+
+.LoadAnimation {
+    position: fixed;
+    height: 100vh;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(243, 238, 237);
+    opacity: 0.85;
+    animation: WelcomePage 500ms;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes WelcomePage {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+
+
+}
+
+@keyframes move {
+    to {
+        margin-left: 90%;
+    }
+}
+
+.bar {
+
+
+    font-size: 20px;
+    width: 10em;
+    height: 1em;
+    position: relative;
+    margin: 100px auto;
+    border-radius: 10px;
+    background: rgb(214 194 194 / 60%);
+    box-shadow:
+        0 0 0 .05em rgba(100, 100, 100, 0.075),
+        0 0 0 .25em rgba(0, 0, 0, 0.1),
+        inset 0 .1em .05em rgba(0, 0, 0, 0.1),
+        0 .05em rgba(255, 255, 255, 0.7);
+}
+
+.sphere {
+
+    display: block;
+    width: 20px;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    box-shadow:
+        inset 0 .15em .1em rgba(241, 234, 234, 0.3),
+        inset 0 -.1em .15em rgba(0, 0, 0, 0.15),
+        0 0 .25em rgba(0, 0, 0, 0.3);
+    animation: move 1.75s ease-in-out infinite alternate;
+
+}
+
+.bar:after {
+    content: "Une moment...";
+    position: absolute;
+    left: 20%;
+    top: 150%;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #555;
+    text-shadow: 0 .05em rgba(255, 255, 255, 0.7);
+}
+
+/*La positoin Genrale*/
+
+.flexCentre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexAround {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.flexEvently {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.flexFonct {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", 'Times New Roman', Times, sans-serif;
+}
+
+/*headeur*/
+
+
+header {
+    box-shadow: 0px 1.5px 2.5px 1px gray;
+    padding: 5px;
+    position: relative;
+}
+
+.imgLogo {
+    width: auto;
+    height: 25px;
+    margin: 15px;
+
+
+}
+
+/*section Explorer*/
+
+.Explorer {
+    background-color: var(--grisClair);
+}
+
+.AccueilTitre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(228, 228, 228);
+    gap: 15px;
+
+}
+
+.AccueilTitre>input {
+    border: none;
+    background-color: rgb(228 228 228);
+    padding: 15px;
+}
+
+.Reservation {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.Reservation>button {
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 5px 4px 6px 1px grey;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    transition-property: transform;
+    transition-duration: 500ms;
+    cursor: pointer;
+    box-shadow: 5px 4px 6px 1px grey;
+}
+
+.btn:hover {
+    transform: scale(1.15);
+    filter: brightness(1.1);
+    box-shadow: 5px 4px 6px 1px rgb(105, 104, 104);
+}
+
+
+/*section Fonctionnmen*/
+
+.Fonctionnmen {
+    padding-left: 15px;
+}
+
+
+
+
+.FocntionBtn {
+    background-color: var(--grisClair);
+    padding: 20px 50px;
+    border: none;
+    border-radius: 39px;
+    box-shadow: 5px 4px 6px 1px #e0dddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.numero {
+    position: absolute;
+    background-color: #9356DC;
+    margin-left: -251px;
+    border-radius: 200px;
+    padding: 10px;
+    height: 5px;
+    width: 5px;
+    color: white;
+    font-size: x-small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    margin-left: -200px;
+    position: absolute;
+    color: #9e9c9c;
+    font-size: 16px;
+    transition: 250ms;
+}
+
+.FocntionBtn>a {
+    color: black;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.FocntionBtn:hover {
+    box-shadow: 0 0 4px 0 grey;
+    background: var(--violetClair);
+}
+
+.FocntionBtn:hover i {
+    color: #9356DC;
+}
+
+.FocntionTitre {
+    font-weight: 600;
+}
+
+
+
+
+/*section Restaurant*/
+.Restaurants>h2 {
+    padding-left: 15px;
+    padding-top: 25px;
+}
+
+.Restaurants {
+    background-color: var(--grisClair);
+}
+
+.RestoImage {
+    height: 189px;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+    object-fit: cover;
+}
+
+.flexEventlyCard {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.RestoCard {
+    border: 0.5px solid white;
+    background-color: white;
+    border-radius: 25px;
+    flex-basis: 20%;
+    margin-bottom: 50px;
+}
+
+.RestoCard>a {
+    text-decoration: none;
+    color: black;
+}
+
+.buttonLike {
+    position: relative;
+    cursor: pointer;
+    background: white;
+    border: 0;
+    font-size: 20px;
+}
+
+.likeActive {
+    color: #9356DC;
+    filter: brightness(1.2);
+    position: absolute;
+    opacity: 0;
+    transition: 300ms;
+}
+
+.likeActive:hover {
+    opacity: 1;
+}
+
+
+
+.RestoCardInfo {
+    font-size: small;
+}
+
+.Nouveau {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+}
+
+.Nouveau::before {
+    content: "Nouveau";
+    position: absolute;
+    padding: 0 10px;
+    background-color: #99e2d0;
+    color: seagreen;
+    display: flex;
+    justify-content: center;
+    top: 15px;
+    right: 10px;
+}
+
+
+
+
+
+
+/*footeur*/
+footer {
+    background-color: rgb(39, 38, 38);
+    padding: 40px;
+}
+
+.titre {
+    font-family: "Shrikhand";
+    color: rgb(247, 247, 247);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(247, 247, 247);
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .flexEventlyCard {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .RestoCard {
+        border: 0.5px solid white;
+        background-color: white;
+        border-radius: 25px;
+        flex-basis: 20%;
+        margin-bottom: 50px;
+        margin: 30px;
+    }
+
+}
